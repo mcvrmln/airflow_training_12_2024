@@ -3,7 +3,7 @@ from airflow.models import DAG
 from airflow.operators.empty import EmptyOperator
 
 with DAG(
-    dag_id="Launch a Rocket",
+    dag_id="launch_a_rocket",
     start_date=datetime.now() - timedelta(days=14),
     description="Launch a rocket DAG",
     schedule="@daily",
