@@ -6,7 +6,7 @@ with DAG(
     dag_id="launch_a_rocket_cron",
     start_date=datetime.now() - timedelta(days=14),
     description="Launch a rocket DAG",
-    schedule="45 13 1,3,5 * *",
+    schedule="45 13 * * 1,3,5",
 ):
     procure_rocket_material = EmptyOperator(task_id="procure_rocket_material")
     procure_fuel = EmptyOperator(task_id="procure_fuel")
